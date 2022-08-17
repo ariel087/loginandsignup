@@ -1,0 +1,27 @@
+@import './loginstyle.css';
+@import './signupstyle.css';
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    height: 100vh;
+    background-image: url('./ranger-4df6c1b6.png');
+    font-family: 'Open Sans', sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a{
+    display: grid;
+    margin-top: 20px;
+    place-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    
+}
+a:hover{
+    color: rgb(85, 212, 255);
+}

@@ -1,0 +1,83 @@
+.main .login-section{
+    padding-top:100px ;
+    
+}
+.main .login-section .login-box{
+    display: grid; 
+    grid-template-columns:50% 1fr;
+    
+    margin: auto;
+    width: 60%;
+    height: 20rem;
+    
+}
+.main .login-section .login-box .inputs{
+    
+    display: grid;
+    grid-template-rows: 35% 1fr;
+    
+    
+}   
+
+.main .login-section .login-box .image-box{
+    
+    background-image: url(loginicon.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    
+    }   
+    
+
+.main .login-section .login-box .inputs .logo{
+    
+    background-color: rgb(100, 196, 255);
+    border-radius: 0 10px 0 0;
+    
+}   
+.main .login-section .login-box .inputs .logo h2{
+    
+    text-align: center;
+}
+.main .login-section .login-box .inputs .logo .warning{
+    width: 100%;
+    min-height: 100px; 
+}   
+
+.main .login-section .login-box .inputs .input-container{
+    border-radius: 0 0 10px 0;
+    background-color: white;
+    
+
+} 
+.main .login-section .login-box .inputs .input-container input{
+    
+    display: grid;
+    width: 97%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    border: none;
+    background-color:rgb(249, 240, 222) ;
+} 
+.main .login-section .login-box .inputs .input-container button{
+    padding-top: 8px;
+    display: grid;
+    width: 80%;
+    height: 30px;
+    margin-inline: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+}
+
+.main .login-section .login-box .inputs .input-container a{
+    padding-top: 20px;
+}
+
+
