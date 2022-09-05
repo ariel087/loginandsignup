@@ -1,8 +1,8 @@
-.main .login-section{
+.main .signup-section{
     padding-top:100px ;
     
 }
-.main .login-section .login-box{
+.main .signup-section .signup-box{
     display: grid; 
     grid-template-columns:50% 1fr;
     
@@ -11,7 +11,7 @@
     height: 20rem;
     
 }
-.main .login-section .login-box .inputs{
+.main .signup-section .signup-box .inputs{
     
     display: grid;
     grid-template-rows: 35% 1fr;
@@ -19,9 +19,9 @@
     
 }   
 
-.main .login-section .login-box .image-box{
+.main .signup-section .signup-box .image-box{
     
-    background-image: url(loginicon.jpg);
+    background-image: url(register-image.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,28 +30,28 @@
     }   
     
 
-.main .login-section .login-box .inputs .logo{
+.main .signup-section .signup-box .inputs .logo{
     
     background-color: rgb(100, 196, 255);
     border-radius: 0 10px 0 0;
     
 }   
-.main .login-section .login-box .inputs .logo h2{
+.main .signup-section .signup-box .inputs .logo h2{
     
     text-align: center;
 }
-.main .login-section .login-box .inputs .logo .warning{
+.main .signup-section .signup-box .inputs .logo .warning{
     width: 100%;
     min-height: 100px; 
 }   
 
-.main .login-section .login-box .inputs .input-container{
+.main .signup-section .signup-box .inputs .input-container{
     border-radius: 0 0 10px 0;
     background-color: white;
     
 
 } 
-.main .login-section .login-box .inputs .input-container input{
+.main .signup-section .signup-box .inputs .input-container input{
     
     display: grid;
     width: 97%;
@@ -62,7 +62,7 @@
     border: none;
     background-color:rgb(249, 240, 222) ;
 } 
-.main .login-section .login-box .inputs .input-container button{
+.main .signup-section .signup-box .inputs .input-container button{
     padding-top: 8px;
     display: grid;
     width: 80%;
@@ -74,10 +74,23 @@
     font-weight: 700;
     color: white;
     background-color: black;
+}  
+.main .signup-section .signup-box .inputs .input-container button:hover{
+    
+    background-color:rgb(85, 212, 255);
 }
 
-.main .login-section .login-box .inputs .input-container a{
-    padding-top: 20px;
-}
+@media (max-width:400px){
+    .main .signup-section .signup-box{
+    
+        display: grid;
+        grid-template-columns: 1fr;
 
+        width: 390px;
 
+    }
+    button{
+        background-color: aqua;
+    }
+    
+    }

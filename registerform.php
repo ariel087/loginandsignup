@@ -1,5 +1,16 @@
 <?php
+
 include 'database.php';
+session_start();
+
+if($_SESSION['status'] == 'invalid' || empty($_SESSION['status']  ) ){
+    $_SESSION['status'] == 'invalid';
+}
+if($_SESSION['status'] == 'valid'){
+    
+    echo "<script>window.location.href='/loginandsignup/home.php'</script>";
+
+}
 
 ?>
 
@@ -12,7 +23,7 @@ include 'database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Student Management System</title>
 </head>
 
 <body>
@@ -33,13 +44,25 @@ include 'database.php';
                         $username = mysqli_real_escape_string($connection, $_POST['username']);
                         $password = mysqli_real_escape_string($connection, $_POST['password']);
                         $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm-password']);
+                        $CC106 = 0;
+                        $GECAP	 = 0;
+                        $GECTM = 0;
+                        $IAS102 = 0;
+                        $IPT101 = 0;
+                        $NET102 = 0;
+                        $NSTP1 = 0;
+                        $PE01 = 0;
+                        
                         if (mysqli_num_rows(mysqli_query($connection, "SELECT * FROM account WHERE username ='{$username}'")) > 0) {
                             echo "The username you have entered is already registered.";
                         } else {
                             if ($password === $confirm_password) {
-                                $sql = "INSERT INTO account (username,password) values('{$username}','{$password}')";
+                                $sql = "INSERT INTO account (username,password,studID, firstname, lastname, section, birthday, age,gender) values('{$username}','{$password}','Not set','Not set','Not set','Not set','Not set','Not set','Not set')";
                                 $result = mysqli_query($connection, $sql);
-                                if ($result) {
+                                $sqlgrade = "INSERT INTO usergrade(`username`, `CC106`, `GEC-AP`, `GEC-TM`, `IAS102`, `IPT101`, `NET102`, `NSTP1`, `PE01`)  values('{$username}','{$CC106}','{$GECAP}','{$GECTM}','{$IAS102}','{$IPT101}','{$NET102}','{$NSTP1}','{$PE01}')";
+                                $result2 = mysqli_query($connection, $sqlgrade);
+                                
+                                if ($result && $result2) {
                                     echo '<script>alert("Registration successful!")</script>';
                                     echo ' <script>window.location.href="/loginandsignup/loginform.php"</script>';
    

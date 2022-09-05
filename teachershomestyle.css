@@ -1,0 +1,98 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    
+}
+.main{
+    margin-top: 0;
+    font-family: 'Roboto Slab', serif;
+    display: grid;
+    background-color: rgb(203, 200, 200);
+    justify-items: center;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    
+}
+.title{
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: -310px;
+    
+}
+h3{
+    margin: 0;
+}
+.box{
+    margin-top:10px ;
+    padding: 10px;
+    height: 150px;
+    width: 600px;
+    background-color: rgb(241, 255, 255);
+    border-radius: 10px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    column-gap:  100px ;
+}
+button{
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    background-color:rgb(100, 196, 255);
+}
+input{
+    margin-left: 12px;
+    border: none;
+    border-bottom: black solid ;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    transition: .5s ease;
+
+}
+input:hover{ border-bottom:rgb(100, 196, 255) solid ;
+}
+input:focus{ border-bottom:rgb(100, 196, 255) solid ;
+}
+.logout{
+    margin-left: 50px;
+}
+.subject-teacher{
+    padding: 0;
+    margin: 0;
+    margin-left:50px ;
+}
+@media (max-width:400px){
+    input{
+        margin-top: 50px;
+        margin-left: -300px;
+    }
+    .box{
+        height: 200px;
+        width: 300px;
+        margin-left: -20px;
+    }
+    button{
+        margin-left: -310px;
+       
+    }
+h1{
+    font-size: 24px;
+}
+.title{
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: -30px;
+    padding: 0;
+    column-gap: 80px;
+}
+}

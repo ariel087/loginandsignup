@@ -1,122 +1,338 @@
-html,body{
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    overflow: auto;
-    
-}
-ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 400;
-    color: #fff;
-}
-.main .home-section .logo-container img{
-    height: 3.5rem;
-    width: 10rem;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
 }
 
-.main{
-    font-family: 'Roboto Slab', serif;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
-    background-color:#000000;   
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
 }
-.main .home-section{
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 4.5rem 1fr;
+
+ul {
+    list-style: none;
 }
-.main .home-section .hero-main{
-    display: grid;
-    grid-template-columns: 1fr ;
-    background-image: url(./homebackground1.jpg);
+
+.main .navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    background: #A2D2FF;
+}
+
+.main .navbar ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.main .navbar ul li a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4B5D67;
+    transition: .5s ease;
+}
+
+.main .navbar ul li a:hover {
+    color: #1ea4ec;
+}
+
+.main #menu {
+    position: fixed;
+    top: .8rem;
+    right: 1rem;
+    background: #4B5D67;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    display: none;
+}
+
+.main .home-section {
+    padding-top: 4rem;
+    height: 100vh;
+    background-image: url(homebackground.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
-.main .home-section .hero-main .box h1{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr ;
-    color: rgb(252, 239, 239);
-    justify-items: center;
-    text-shadow: 0 0 30px;
-    font-size: 60px;
-    
- }
-  h3{
+
+.main .home-section h1 {
+    height: 20px;
+    padding-top: 1.5rem;
+    font-size: 48px;
+    font-weight: 700;
     color: #fff;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-rows: 5px;
- }
- 
-.main .home-section .nav-main{
-    margin: 0 100px;
+    text-shadow: 4px 4px #000000;
+}
+
+.main .account-section {
+    padding-top: 10px;
+    height: 100vh;
+    background-color: #fccc6b;
+    text-align: center;
+}
+
+.main .account-section h1 {
+    margin-left: 100px;
+    text-align: center;
+    width: 160px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: #000000;
+    color: #fff;
+
+}
+
+.main .account-section h3 {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.main header {
+    margin-top: 60px;
+    position: fixed;
     display: flex;
     align-items: center;
-    
-}
-.main .home-section .nav-main .logo-container{
-    flex: 1;
-}
-.main .home-section .nav-main .menu-container{
-    display: flex;
-    align-items: center;
-}
-.main .home-section .nav-main .menu-container li a{
-font-size: 20px;
-margin: 0 15px;
-display: flex;
-flex-direction: column;
-}
-.main .home-section .nav-main .menu-container li a::after{
-    content: "";
-    display: block;
+    justify-content: center;
     width: 100%;
-    height: 4px;
-    background: rgb(40, 133, 240);
-    transform: scale(0,1);
+    height: 100vh;
+    background: #A2D2FF;
+    display: none;
+
 }
-.main .home-section .nav-main .menu-container li a:hover::after{
-    transform: scale(1,1); 
+
+.main .menu .menu-box {
+    display: flex;
+    margin: 50px;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    height: 300px;
+
 }
-.logout{
-     background-color:rgb(40, 133, 240); 
-     color:white;
-     width:100px;
-     height:40px;
-     border:none;
-     font-family: 'Open Sans', sans-serif;
-     font-weight:700;
-     font-size:14px;
-     border-radius:5px;
-     margin-left:40px;
-     cursor: pointer;
-                                   
+
+.main .menu .menu-box ul li {
+
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
-.logout:hover{
-   opacity: .75;
+
+.main .menu .menu-box ul li a {
+    color: #4B5D67;
+    transition: .5s ease;
 }
-.box{
-    padding: 0;
-    margin: 0;
+
+.main .account-section .info {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    background-color: rgb(156, 150, 150);
+    
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+}
+.main .account-section .info h3{
+   font-size: 40px;
+}
+
+.main .grade-section {
+    height: 100vh;
+}
+
+.main .grade-section .grade-title {
     margin-top: 30px;
-    margin-inline: 100px;
+    margin-left: 100px;
+    text-align: center;
+    width: 160px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: #000000;
+    color: #fff;
+
+}
+
+.main .grade-section .grade-box {
+    
+    margin-top: 30px;
+    
+    display: grid;
+    text-align: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    margin-inline: 50px;
+}
+
+.main .grade-section .grade-box .box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border:solid #333;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.main .grade-section .grade-box .box h3 {
+    border-bottom: solid black;
+}
+.main .grade-section .grade-box .box h2 {
+    margin-top: 30px;
+}
+.main .grade-section .grade-box .box .score {
+    margin-top: 20px;
+    font-size: 60px;
+}
+.main .schedule-section{
+    height: 100vh;
+    background-color: rgb(235, 231, 231);
+}
+.main .schedule-section .schedule-box{
+    margin-inline: 50px;
+    display: grid;
+    margin-top:20px;
+    padding-top: 30px;
+    text-align: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 280px 280px;
     
 }
+.main .schedule-section .schedule-box .schedbox{
+    background-color: #000000;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+.main .schedule-section h1{
+margin-top: 60px;
+margin-left: 100px;
+text-align: center;
+width: 160px;
+border-radius: 20px;
+height: 50px;
+background-color: #000000;
+color: #fff;
+
+}
+.main .schedule-section .schedule-box h1{
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.main .schedule-section .schedule-box h2{
+    margin-top: 10px;
+}
+.main .schedule-section .schedule-box h3{
+    margin-top: 20px;
+}
+.main .menu .menu-box ul li form .menu-button{
+    font-weight: 700;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    background-image: linear-gradient(to right top, #1c4687, #17386c, #112a52, #0c1c3a, #060e23);
+    transition: all 2s ease-in;
+}
+.main .navbar form .navbar-button {
+    font-weight: 700;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 50px;
+    background-image: linear-gradient(to right top, #1c4687, #17386c, #112a52, #0c1c3a, #060e23);
+    transition: all 2s ease-in;
+}
+
+.main .menu .menu-box ul li form .menu-button:hover{
+    background-image: linear-gradient(to right top, #457cd0, #be72cf, #ff69a1, #ff885e, #ffc015);
+}
+
  
+@media(max-width: 75rem) {
+    .main #menu {
+        display: block;
+    }
+
+    .main .navbar ul {
+        display: none;
+    }
+
+    header.toggle {
+        display: block;
+    }
+
+    .main .home-section h1 {
+        font-size: 35px;
+
+    }
+    .main .navbar form .navbar-button {
+        display: none;
+    }
+}
+
+@media (max-width:400px) {
+    .main .home-section h1 {
+        font-size: 20px;
+
+    }
+
+    .main .account-section .info {
+        display: grid;
+        row-gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        
+    }
+    .main .account-section .info h3{
+     font-size: 20px;   
+    }
+    .main .account-section h3 {
+        font-size: 20px;
+    }
+
+    .main .grade-section .grade-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px;
+    }
+    .main .schedule-section .schedule-box{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:300px 300px 300px 300px 300px 300px 300px 300px;
+    }
+    .main .schedule-section .schedule-box .h{
+        margin: 0;
+        margin-left: 60px;
+        margin-top: 20px;
+        text-align: center;
+    }
+ 
+}

@@ -4,22 +4,33 @@
 include 'database.php';
 session_start();
 
-if($_SESSION['status'] == 'invalid' || empty($_SESSION['status'] )){
+if($_SESSION['status'] == 'invalid' || empty($_SESSION['status']  ) ){
     $_SESSION['status'] == 'invalid';
 }
 if($_SESSION['status'] == 'valid'){
+    
     echo "<script>window.location.href='/loginandsignup/home.php'</script>";
+
 }
 if(isset($_POST['submit'])){
  
     $username = mysqli_real_escape_string($connection,$_POST['username']);
     $password = mysqli_real_escape_string($connection,$_POST['password']);
-    if (mysqli_num_rows(mysqli_query($connection, "SELECT * FROM account WHERE username ='{$username}' AND password ='{$password}'")) > 0) {
+    if (mysqli_num_rows( mysqli_query($connection,"SELECT * FROM account WHERE username ='{$username}' AND password ='{$password}'")) > 0 ||mysqli_num_rows( mysqli_query($connection,"SELECT * FROM teachersaccount WHERE teachersname ='{$username}' AND password ='{$password}'")) > 0) {
+        $results = mysqli_fetch_array($sqlresult);
         $_SESSION['status'] = 'valid';
         $_SESSION['username'] = $username;
+        
+        if($username === 'm.rivera' || $username === 'j.dinlasan1'|| $username === 'j.dinlasan2'|| $username === 'm.ablaza'|| $username === 'j.morano'|| $username === 'j.c.enrile'|| $username === 'k.reyes'|| $username === 'j.bautista'){
+        echo ' <script>window.location.href="/loginandsignup/teachershome.php"</script>';
+        
+     }
+      
         echo ' <script>window.location.href="/loginandsignup/home.php"</script>';
         
-    }else{
+    }
+    
+    else{
         $_SESSION['status'] = 'invalid';
     }
     
@@ -34,8 +45,8 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>

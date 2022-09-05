@@ -1,5 +1,5 @@
-@import './loginstyle.css';
-@import './signupstyle.css';
+@import './loginformstyle.css';
+@import './registerformstyle.css';
 
 html,body{
     margin: 0;
@@ -7,7 +7,7 @@ html,body{
 }
 .main{
     height: 100vh;
-    background-image: url('./ranger-4df6c1b6.png');
+    background-color: rgb(99, 141, 177);
     font-family: 'Open Sans', sans-serif;
     background-position: center;
     background-size: cover;
@@ -25,3 +25,4 @@ a{
 a:hover{
     color: rgb(85, 212, 255);
 }
+
